@@ -1,0 +1,58 @@
+﻿@model  IEnumerable<Praktika.Models.Dostavka>
+@{
+    ViewBag.Title = "Index";
+}
+<h2 align="center"> <b>Index </b></h2>
+
+<p>
+    @Html.ActionLink("New", "Create")
+</p>
+
+
+
+
+
+<table class="table">
+    <tr>
+        <th align="left">    @Html.DisplayNameFor(model => model.NamE) </th>
+        <th align="right">   @Html.DisplayNameFor(model => model.Adress)</th>
+        <th align="right">   @Html.DisplayNameFor(model => model.Phone)</th>
+        <th align="right">   @Html.DisplayNameFor(model => model.PriceDostavki)</th>
+        <th align="right">   @Html.DisplayNameFor(model => model.StatID)</th>
+    </tr>
+
+        @foreach (var item in Model)
+        {
+<tr>
+    <td align="left">
+        @Html.DisplayFor(modelItem => item.NamE)
+    </td>
+
+    <td>   @Html.DisplayFor(modelItem => item.Adress) </td>
+    <td>   @Html.DisplayFor(modelItem => item.Phone) </td>
+    <td>   @Html.DisplayFor(modelItem => item.PriceDostavki) </td>
+    <td>   @Html.DisplayFor(modelItem => item.StatID) </td>
+
+
+
+    <td align="center">
+        <h5>
+            @Html.ActionLink("Update", "Update", new { id = item.ID }) |
+            @Html.ActionLink("Order", "Order", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+        </h5>
+    </td>
+
+
+    <t\>
+
+</tr>
+
+                    }
+
+    </table>
+
+
+
+
+

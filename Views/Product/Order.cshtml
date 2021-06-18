@@ -1,0 +1,44 @@
+﻿@model  Praktika.Models.Dostavka
+@{
+    ViewBag.Title = "Order";
+}
+
+<h2>Order</h2>
+
+<div>
+    <h4>Dostavka</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamE)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Adress)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.StatID)
+
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NamE)<br>
+
+            @Html.DisplayFor(model => model.Adress)<br>
+
+            @Html.DisplayFor(model => model.Phone)<br>
+
+            @Html.DisplayFor(model => model.StatID)<br>
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
+
